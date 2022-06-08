@@ -1,4 +1,4 @@
-from a import larger_than_previous1, larger_than_previous2
+from a import larger_than_previous1
 
 import os
 from timeit import timeit
