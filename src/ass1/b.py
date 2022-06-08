@@ -1,7 +1,12 @@
-from a import larger_than_previous1
-
 import os
+import sys
 from timeit import timeit
+
+sys.path.append(os.getcwd())
+
+from src.modules.aoc_module import get_data
+from src.ass1.a import larger_than_previous1
+
 
 def three_sliding_window(m_list: list)-> list:
     return_list = []
@@ -15,14 +20,8 @@ def three_sliding_window(m_list: list)-> list:
 
 
 if __name__ == "__main__":
-    FILE1 = "test_input.txt"
-    FILE2 = "assignment_input.txt"
-    PATH = os.path.join(os.getcwd(), FILE1)
-
-    with open(PATH) as f:
-        contents = f.read()
-        m_list = contents.split("\n")
-        m_list = list(map(int, m_list))
+    m_list = get_data('1', 'FILE2')
+    m_list = list(map(int, m_list))
     
     prep_list = three_sliding_window(m_list)
 

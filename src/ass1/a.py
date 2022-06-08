@@ -1,8 +1,12 @@
 # https://adventofcode.com/2021/day/1
-
 import os
 import sys
 from timeit import timeit
+
+sys.path.append(os.getcwd())
+
+from src.modules.aoc_module import get_data
+
 
 
 def larger_than_previous1(list_to_check: list)-> int:
@@ -44,14 +48,8 @@ def larger_than_previous2(list_to_check: list)-> int:
 
 if __name__ == "__main__":
     sys.setrecursionlimit(1000)
-    FILE1 = "test_input.txt"
-    FILE2 = "assignment_input.txt"
-    PATH = os.path.join(os.getcwd(), FILE2)
-
-    with open(PATH) as f:
-        contents = f.read()
-        m_list = contents.split("\n")
-        m_list = list(map(int, m_list))
+    m_list = get_data('1', 'FILE2')
+    m_list = list(map(int, m_list))
     
     result1 = larger_than_previous1(m_list)
     duration1 = timeit(lambda: larger_than_previous1(m_list), number=1000)
