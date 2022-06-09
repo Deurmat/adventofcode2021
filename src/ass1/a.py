@@ -1,4 +1,5 @@
 # https://adventofcode.com/2021/day/1
+
 import os
 import sys
 from timeit import timeit

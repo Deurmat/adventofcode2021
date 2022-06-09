@@ -1,3 +1,5 @@
+# https://adventofcode.com/2021/day/3
+
 import os
 import sys
 
@@ -20,7 +22,7 @@ def convert_bin_to_int(binary:str)->int:
 
 
 if __name__ == "__main__":
-    data_list = get_data('3', 'FILE2')
+    data_list = get_data('3', 'FILE1')
     zipped_list = zip_list_items(data_list)
     gamma_bin = generate_bin_from_occurence(zipped_list)
     gamma = convert_bin_to_int(gamma_bin)
